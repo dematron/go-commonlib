@@ -18,5 +18,3 @@ func Bytes2Human(n uint64, postfix string, divider float64) string {
 	}
 	return fmt.Sprintf("%3.2f %s%s", num, unit, postfix)
 }
-
-

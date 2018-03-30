@@ -38,7 +38,7 @@ func MTimeCheck(name string, seconds int64) bool {
 	now := time.Now()
 
 	fi, err := os.Stat(name)
-	if e := CheckError(err); e != nil {
+	if e := CheckError(err, ErrorTrace, ErrorTracepath); e != nil {
 		return false
 	}
 

@@ -6,13 +6,13 @@ import (
 )
 
 type testpair struct {
-	value int64
+	value   int64
 	correct bool
 }
 
 var tests = []testpair{
-	{ 60, false },
-	{ time.Now().Unix(), true },
+	{60, false},
+	{time.Now().Unix(), true},
 }
 
 func TestMTimeCheck(t *testing.T) {
