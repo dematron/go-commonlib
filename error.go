@@ -17,7 +17,7 @@ func CheckError(inerr error, errorTrace bool, errorTracepath string) error {
 		log.Printf("Error: %v%s", inerr, Carriage)
 		// trace
 		pc := make([]uintptr, 15)
-		n := runtime.Callers(2, pc)
+		n := runtime.Callers(3, pc)
 		frames := runtime.CallersFrames(pc[:n])
 		frame, _ := frames.Next()
 		log.Printf("%s,:%d %s%s", frame.File, frame.Line, frame.Function, Carriage)
